@@ -1,0 +1,38 @@
+@keyframes slideAndScale {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    5% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    45% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide-in.active {
+    visibility: visible;
+    animation: slideAndScale 10s ease-in-out infinite;
+}
+
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 10s; }
+.delay-3 { animation-delay: 20s; }
+.delay-4 { animation-delay: 30s; }
+.delay-5 { animation-delay: 40s; }
