@@ -9,29 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="anim.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="anim.js"></script>
 </head>
 <body class="bg-gray-100">
 
     <!-- section 1 navbar/Menu -->
+     <section>
         <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-            <nav class="bg-white/75 backdrop-blur-sm rounded-full shadow-lg px-8 py-4 mx-4">
+            <nav class="bg-white/10 backdrop-blur-sm rounded-full shadow-lg px-8 py-4 mx-4">
                 <div class="flex items-center justify-between gap-8">
                 
                 <div class="font-bold text-gray-800 mr-0 md:mr-8">
                     <span class="text-lg md:text-xl">Profile Page</span>
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Header</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Biodata</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Portofolio</a>
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                    <a href="#Biodata" class="text-gray-600 hover:text-gray-900 transition-colors">Biodata</a>
+                    <a href="#porto" class="text-gray-600 hover:text-gray-900 transition-colors">Portofolio</a>
                 </div>
             </div>
         </nav>
     </div>
+    </section>
 
-    <div class="h-32 md:h-18"></div>
+    <div class="h-32 md:h-16"></div>
 
     <!-- Section 2: Judul dan Gambar -->
+     <section id="home">
         <div class="bg-gray-100 p-4 md:p-12">
             <div class="container mx-auto">
                 <div class="flex flex-col md:flex-row gap-8">
@@ -69,88 +73,133 @@
             </div>
         </div>
     </div>
-
+</section>
 
     <!-- Section 3: Biodata -->
+<section id="Biodata">
     <div class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col items-center space-y-6">
                 <h2 class="text-2xl font-bold">About Me</h2>
                 <div class="w-20 h-1 bg-blue-500 rounded"></div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-12">
-                    <div class="text-center space-y-4">
-                        <div class="text-blue-500 text-4xl font-bold">Who?</div>
-                        <p class="text-gray-600">Gunawan Wibisana</p>
+                
+                <!-- Slider Container -->
+                <div class="relative w-full max-w-2xl mx-auto h-48 overflow-hidden">
+                    <!-- Progress Bar -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gray-200">
+                        <div class="h-full bg-blue-500 slide-bar"></div>
                     </div>
 
-                    <div class="text-center space-y-4">
-                        <div class="text-blue-500 text-4xl font-bold">Education</div>
-                        <p class="text-gray-600">SMKN 2 DEPOK SLEMAN</p>
-                    </div>
-
-                    <div class="text-center space-y-4">
-                        <div class="text-blue-500 text-4xl font-bold">Major</div>
-                        <p class="text-gray-600">System Information Network and Aplication</p>
-                    </div>
-                    
-                    <div class="col-span-2 md:col-span-3 grid grid-cols-2 gap-8 md:w-2/3 mx-auto">
-                    <div class="text-center space-y-4">
-                        <div class="text-blue-500 text-4xl font-bold">Skills</div>
-                        <p class="text-gray-600">Web Dev, IOT, Fotografi, Video Editing</p>
-                    </div>
-                    
-                    <div class="text-center space-y-4">
-                        <div class="text-blue-500 text-4xl font-bold">Hobby</div>
-                        <p class="text-gray-600">Basketball, Hiking, Modern Farming</p>
-
+                    <!-- Text Slides -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center space-y-4 slide-text delay-1">
+                            <div class="text-blue-500 text-4xl font-bold">Who?</div>
+                            <p class="text-gray-600">Gunawan Wibisana</p>
                         </div>
                     </div>
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center space-y-4 slide-text delay-2">
+                            <div class="text-blue-500 text-4xl font-bold">Education</div>
+                            <p class="text-gray-600">SMKN 2 DEPOK SLEMAN</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center space-y-4 slide-text delay-3">
+                            <div class="text-blue-500 text-4xl font-bold">Major</div>
+                            <p class="text-gray-600">System Information Network and Application</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center space-y-4 slide-text delay-4">
+                            <div class="text-blue-500 text-4xl font-bold">Skills</div>
+                            <p class="text-gray-600">Web Dev, IOT, Fotografi, Video Editing</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center space-y-4 slide-text delay-5">
+                            <div class="text-blue-500 text-4xl font-bold">Hobby</div>
+                            <p class="text-gray-600">Basketball, Hiking, Modern Farming, Code</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+    </section>
     
 
-    <!-- Section 4: Portfolio -->
-     <table width="90%" height="auto" align="center" cellpadding="10">
-        <tr>
-            <td colspan="3" align="center">
-                <h2>Portofolio</h2>
-            </td>
-        </tr>
-        <tr>
-            <td width="33%">
-                <table border="1" width="95%" cellpadding="10">
-                    <td align="center">
-                        <img src="C:\Sekolah\HTML\img\Portofolio.png" alt="" width="100%" height="auto">
-                        <p><b>Proyek 1</b></p>
-                        <p>Deskripsi Proyek 1</p>
-                    </td>
-                </table>
-            </td>
 
-            <td width="33%">
-                <table border="1" width="95%" cellpadding="10">
-                    <td align="center">
-                        <img src="C:\Sekolah\HTML\img\Portofolio.png" alt="" width="100%" height="auto">
-                        <p><b>Proyek 1</b></p>
-                        <p>Deskripsi Proyek 1</p>
-                    </td>
-                </table>
-            </td>
+<!-- Section 4 Portofolio -->
+<section id="porto" class="relative min-h-screen flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
+        <h1 class="text-2xl md:text-[150px] font-black text-black md:text-blue-500/40 absolute top-5 md:top-24 pointer-events-none flex flex-col items-center">
+            My Project
+            <div class="w-24 h-1 bg-blue-500 rounded mt-6 md:hidden"></div>
+        </h1>
 
-            <td width="33%">
-                <table border="1" width="95%" cellpadding="10">
-                    <td align="center">
-                        <img src="C:\Sekolah\HTML\img\Portofolio.png" alt="" width="100%" height="auto">
-                        <p><b>Proyek 1</b></p>
-                        <p>Deskripsi Proyek 1</p>
-                    </td>
-                </table>
-            </td>
-        </tr>
-     </table>
+    <div class="carousel-container w-full max-w-6xl h-[600px] relative mt-20">
+        <button class="nav-arrow left text-4xl">&lsaquo;</button>
+        <div class="carousel-track">
 
+            <a class="card" data-index="0" href="./fotografi/fotografi.html">
+                <img src="img/gunawan1.JPG" alt="" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 flex justify-start right-0 p-6 px-0 mb-10 md:mb-20">
+                <div class="inline-block rounded-r-lg px-4 py-2">
+                    <h2 class="text-xl font-bold text-white whitespace-nowrap">Fotografi</h2>
+                    <p class="text-sm text-white">Here is all of my best photos</p>
+                </div>
+            </div>
+        </a>
+
+            <a class="card" data-index="0" href="#">
+                <img src="img/gunawan1.JPG" alt="" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 flex justify-start right-0 p-6 px-0 mb-10 md:mb-20">
+                <div class="inline-block rounded-r-lg px-4 py-2">
+                    <h2 class="text-xl font-bold text-white whitespace-nowrap">Edited Video</h2>
+                    <p class="text-sm text-white">Here is all of my edited video</p>
+                </div>
+            </div>
+        </a>
+
+            <a class="card" data-index="0" href="#">
+                <img src="img/gunawan1.JPG" alt="" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 flex justify-start right-0 p-6 px-0 mb-10 md:mb-20">
+                <div class="inline-block rounded-r-lg px-4 py-2">
+                    <h2 class="text-xl font-bold text-white whitespace-nowrap">Website Dev</h2>
+                    <p class="text-sm text-white">Here is All of my project Web</p>
+                </div>
+            </div>
+        </a>
+
+
+            <a class="card" data-index="0" href="#">
+                <img src="img/gunawan1.JPG" alt="" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 flex justify-start right-0 p-6 px-0 mb-10 md:mb-20">
+                <div class="inline-block rounded-r-lg px-4 py-2">
+                    <h2 class="text-xl font-bold text-white whitespace-nowrap">IOT</h2>
+                    <p class="text-sm text-white">Here is All of my IOT project</p>
+                </div>
+            </div>
+        </a>
+
+
+            <a class="card" data-index="0" href="#">
+                <img src="img/gunawan1.JPG" alt="" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 flex justify-start right-0 p-6 px-0 mb-10 md:mb-20">
+                <div class="inline-block rounded-r-lg px-4 py-2">
+                    <h2 class="text-xl font-bold text-white whitespace-nowrap">Anotha Hobby</h2>
+                    <p class="text-sm text-white">Documentation of my hobby</p>
+                </div>
+            </div>
+        </a>
+
+        <button class="nav-arrow right text-4xl">&rsaquo;</button>
+    </div>
+</section>
 
 </body>
 </html>
