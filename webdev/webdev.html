@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+ @keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 25s linear infinite;
+    min-width: 200%;
+    will-change: transform;
+}
+
+@media screen and (min-width: 768px) {
+    .animate-marquee {
+        animation-duration: 20s;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .animate-marquee {
+        animation-duration: 15s;
+    }
+}
+
+.marquee-container:hover .animate-marquee {
+    animation-play-state: paused;
+}
+</style>
+<body>
+
+        <!-- section 1 navbar/Menu -->
+     <section>
+        <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+            <nav class="bg-black/75 backdrop-blur-sm rounded-full shadow-lg px-8 py-4 mx-4">
+                <div class="flex items-center justify-between gap-8">
+                
+                <div class="font-bold text-white mr-0 md:mr-8">
+                    <span class="text-lg md:text-xl">Profile Page</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="#home" class="text-white hover:text-gray-900 transition-colors">Home</a>
+                    <a href="#Biodata" class="text-white hover:text-gray-900 transition-colors">Biodata</a>
+                    <a href="#porto" class="text-white hover:text-gray-900 transition-colors">Portofolio</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </section>
+
+    <section class="w-full h-[75vh] relative">
+        <img 
+            src="img/alpacino.jpg" 
+            alt="Hero image" 
+            class="w-full h-full object-cover"
+        >
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center flex flex-col">
+            <h1 class="text-4xl font-bold text-white/85">My Website Project</h1>
+            <p class="text-xl text-white/85 mt-4">This is all of my website project so far</p>
+        </div>
+    </section>
+
+     <!-- Card Section (100vh) -->
+    <section class="w-full min-h-screen bg-black flex flex-col">
+        <div class="container mx-auto px-4 pt-16 pb-0 flex-1">
+            <!-- Title -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-white/85 text-center">
+                    My Projects
+                </h2>
+            </div>
+
+            <!-- Cards Container - Improved spacing -->
+            <div class="container mx-auto px-4 flex justify-center items-center mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
+                        <div class="w-full h-56 bg-gradient-to-r from-purple-600 to-blue-600 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-semibold">Project Image</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+                            <p class="text-sm text-white/70 mb-4">Modern web application with sleek design</p>
+                            <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
+                                hover:bg-white hover:text-black transition-all duration-300 
+                                flex items-center justify-center gap-2 rounded-lg">
+                                View More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
+                        <div class="w-full h-56 bg-gradient-to-r from-green-600 to-teal-600 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-semibold">Project Image</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white">Project 2</h3>
+                            <p class="text-sm text-white/70 mb-4">E-commerce platform with advanced features</p>
+                            <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
+                                hover:bg-white hover:text-black transition-all duration-300 
+                                flex items-center justify-center gap-2 rounded-lg">
+                                View More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
+                        <div class="w-full h-56 bg-gradient-to-r from-orange-600 to-red-600 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-semibold">Project Image</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white">Project 3</h3>
+                            <p class="text-sm text-white/70 mb-4">Mobile app with intuitive user interface</p>
+                            <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
+                                hover:bg-white hover:text-black transition-all duration-300 
+                                flex items-center justify-center gap-2 rounded-lg">
+                                View More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="bg-black w-full h-full flex flex-row items-center">
+    <div class="marquee-container overflow-hidden bg-black py-8">
+        <div class="flex animate-marquee gap-x-48 md:gap-x-32 whitespace-nowrap">
+            <!-- First set of logos -->
+            <div class="flex space-x-6 md:space-x-8 lg:space-x-12 px-8 md:px-16 lg:px-24 items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" 
+                    alt="PHP" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-line-wordmark.svg" 
+                    alt="Laravel" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" 
+                    alt="Tailwind" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg"
+                    alt="MySQL" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    alt="Figma"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                    alt="JS"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+            </div>
+
+            <!-- Duplicate set for seamless loop -->
+            <div class="flex space-x-6 md:space-x-8 lg:space-x-12 px-8 md:px-16 lg:px-24 items-center">
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                    alt="PHP" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-line-wordmark.svg" 
+                    alt="Laravel" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" 
+                    alt="Tailwind" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg"
+                    alt="MySQL" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    alt="Figma"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                    alt="JS"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+            </div>
+
+            <div class="flex space-x-6 md:space-x-8 lg:space-x-12 px-8 md:px-16 lg:px-24 items-center">
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                    alt="PHP" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-line-wordmark.svg" 
+                    alt="Laravel" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" 
+                    alt="Tailwind" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg"
+                    alt="MySQL" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    alt="Figma"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                    alt="JS"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+            </div>
+
+            <div class="flex space-x-6 md:space-x-8 lg:space-x-12 px-8 md:px-16 lg:px-24 items-center">
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                    alt="PHP" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-line-wordmark.svg" 
+                    alt="Laravel" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" 
+                    alt="Tailwind" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg"
+                    alt="MySQL" 
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    alt="Figma"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                    alt="JS"
+                    class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w-full h-full bg-black flex items-center">
+                        <!-- Cards Container - Improved spacing -->
+            <div class="container mx-auto px-4 flex justify-center items-center mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
+                        <div class="w-full h-56 bg-gradient-to-r from-purple-600 to-blue-600 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-semibold">Project Image</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+                            <p class="text-sm text-white/70 mb-4">Modern web application with sleek design</p>
+                            <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
+                                hover:bg-white hover:text-black transition-all duration-300 
+                                flex items-center justify-center gap-2 rounded-lg">
+                                View More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
+                        <div class="w-full h-56 bg-gradient-to-r from-green-600 to-teal-600 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-semibold">Project Image</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white">Project 2</h3>
+                            <p class="text-sm text-white/70 mb-4">E-commerce platform with advanced features</p>
+                            <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
+                                hover:bg-white hover:text-black transition-all duration-300 
+                                flex items-center justify-center gap-2 rounded-lg">
+                                View More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
+                        <div class="w-full h-56 bg-gradient-to-r from-orange-600 to-red-600 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-semibold">Project Image</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white">Project 3</h3>
+                            <p class="text-sm text-white/70 mb-4">Mobile app with intuitive user interface</p>
+                            <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
+                                hover:bg-white hover:text-black transition-all duration-300 
+                                flex items-center justify-center gap-2 rounded-lg">
+                                View More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+</body>
+</html>
