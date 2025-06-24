@@ -50,16 +50,16 @@
                     <span class="text-lg md:text-xl">Profile Page</span>
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="#home" class="text-white hover:text-gray-900 transition-colors">Home</a>
-                    <a href="#Biodata" class="text-white hover:text-gray-900 transition-colors">Biodata</a>
-                    <a href="#porto" class="text-white hover:text-gray-900 transition-colors">Portofolio</a>
+                    <a href="../porto.html" class="text-white hover:text-gray-900 transition-colors">Home</a>
+                    <a href="../porto.html#Biodata" class="text-white hover:text-gray-900 transition-colors">Biodata</a>
+                    <a href="../porto.html#porto" class="text-white hover:text-gray-900 transition-colors">Portofolio</a>
                 </div>
             </div>
         </nav>
     </div>
     </section>
 
-    <section class="w-full h-[75vh] relative">
+    <section class="w-full h-[75dvh] relative">
         <img 
             src="img/alpacino.jpg" 
             alt="Hero image" 
@@ -82,8 +82,8 @@
             </div>
 
             <!-- Cards Container - Improved spacing -->
-            <div class="container mx-auto px-4 flex justify-center items-center mb-16">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="container mx-auto px-4 flex justify-center items-center mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-6">
                     <!-- Card 1 -->
                     <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
                         <div class="w-full h-56 bg-gradient-to-r from-purple-600 to-blue-600 rounded-sm flex items-center justify-center">
@@ -92,6 +92,11 @@
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-white">Project 1</h3>
                             <p class="text-sm text-white/70 mb-4">Modern web application with sleek design</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Arduino</span>
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Sensors</span>
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Cloud</span>
+                            </div>
                             <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
                                 hover:bg-white hover:text-black transition-all duration-300 
                                 flex items-center justify-center gap-2 rounded-lg">
@@ -111,6 +116,11 @@
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-white">Project 2</h3>
                             <p class="text-sm text-white/70 mb-4">E-commerce platform with advanced features</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Arduino</span>
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Sensors</span>
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Cloud</span>
+                            </div>
                             <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
                                 hover:bg-white hover:text-black transition-all duration-300 
                                 flex items-center justify-center gap-2 rounded-lg">
@@ -130,9 +140,14 @@
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-white">Project 3</h3>
                             <p class="text-sm text-white/70 mb-4">Mobile app with intuitive user interface</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Arduino</span>
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Sensors</span>
+                                <span class="text-xs bg-black text-white px-2 py-1 rounded hover:bg-white hover:text-black" style="border-left:2px solid white;">Cloud</span>
+                            </div>
                             <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
                                 hover:bg-white hover:text-black transition-all duration-300 
-                                flex items-center justify-center gap-2 rounded-lg">
+                                flex items-center justify-center rounded-lg">
                                 View More
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -143,10 +158,8 @@
                 </div>
             </div>
         </div>
-</section>
 
-<section class="bg-black w-full h-full flex flex-row items-center">
-    <div class="marquee-container overflow-hidden bg-black py-8">
+        <div class="marquee-container overflow-hidden bg-black py-8 mt-0 mb-0">
         <div class="flex animate-marquee gap-x-48 md:gap-x-32 whitespace-nowrap">
             <!-- First set of logos -->
             <div class="flex space-x-6 md:space-x-8 lg:space-x-12 px-8 md:px-16 lg:px-24 items-center">
@@ -261,18 +274,36 @@
     </div>
 </section>
 
-<section class="w-full h-full bg-black flex items-center">
-                        <!-- Cards Container - Improved spacing -->
+
+<section class="w-full h-full min-h-screen bg-black flex items-center">
+
+            <div class="container mx-auto px-4 pt-16 md:pt-0 pb-0 flex-1">
+            <!-- Title -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-white/85 text-center">
+                    What Can I Do?
+                </h2>
+            </div>
+
+        <!-- Cards Container - Improved spacing -->
             <div class="container mx-auto px-4 flex justify-center items-center mb-16">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Card 1 -->
-                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
-                        <div class="w-full h-56 bg-gradient-to-r from-purple-600 to-blue-600 rounded-sm flex items-center justify-center">
-                            <span class="text-white font-semibold">Project Image</span>
-                        </div>
+                    <div class="w-80 h-64 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-white">Project 1</h3>
-                            <p class="text-sm text-white/70 mb-4">Modern web application with sleek design</p>
+                            <h2 class="text-xl font-semibold text-white">Front-End</h2>
+                            <div class="w-40 h-1 bg-white m-5 ml-0 "></div>
+                            <div class="flex flex-row container gap-4 py-2 items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" 
+                                alt="CSS"
+                                class="h-16 w-16 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" 
+                                alt="Tailwind" 
+                                class="h-16 w-16 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                                alt="JS"
+                                class="h-12 w-12 grayscale hover:grayscale-0 flex-shrink-0"/>
+                            </div>
                             <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
                                 hover:bg-white hover:text-black transition-all duration-300 
                                 flex items-center justify-center gap-2 rounded-lg">
@@ -285,13 +316,15 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
-                        <div class="w-full h-56 bg-gradient-to-r from-green-600 to-teal-600 rounded-sm flex items-center justify-center">
-                            <span class="text-white font-semibold">Project Image</span>
-                        </div>
+                    <div class="w-80 h-64 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-white">Project 2</h3>
-                            <p class="text-sm text-white/70 mb-4">E-commerce platform with advanced features</p>
+                            <h2 class="text-xl font-semibold text-white">UI Design</h2>
+                            <div class="w-40 h-1 bg-white m-5 ml-0 "></div>
+                            <div class="flex flex-row container gap-4 py-2 items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" 
+                                alt="Figma"
+                                class="h-16 w-16 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                            </div>
                             <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
                                 hover:bg-white hover:text-black transition-all duration-300 
                                 flex items-center justify-center gap-2 rounded-lg">
@@ -304,13 +337,21 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="w-80 h-96 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
-                        <div class="w-full h-56 bg-gradient-to-r from-orange-600 to-red-600 rounded-sm flex items-center justify-center">
-                            <span class="text-white font-semibold">Project Image</span>
-                        </div>
+                    <div class="w-80 h-64 bg-black rounded-sm shadow-lg hover:scale-105 transition-transform border border-white/10">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-white">Project 3</h3>
-                            <p class="text-sm text-white/70 mb-4">Mobile app with intuitive user interface</p>
+                            <h2 class="text-xl font-semibold text-white">Back-End</h2>
+                            <div class="w-40 h-1 bg-white m-5 ml-0 "></div>
+                            <div class="flex flex-row container gap-4 py-2 items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-line-wordmark.svg" 
+                                alt="Laravel"
+                                class="h-16 w-16 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" 
+                                alt="PHP" 
+                                class="h-16 w-16 grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"/>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg" 
+                                alt="MySql"
+                                class="h-12 w-12 grayscale hover:grayscale-0 flex-shrink-0"/>
+                            </div>
                             <button class="w-full text-white mt-4 px-6 py-2 border-2 border-white 
                                 hover:bg-white hover:text-black transition-all duration-300 
                                 flex items-center justify-center gap-2 rounded-lg">
@@ -325,7 +366,6 @@
             </div>
         </div>
 </section>
-
 
 </body>
 </html>

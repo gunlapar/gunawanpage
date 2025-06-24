@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Portfolio - Internet of Things</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pink': {
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                        }
+                    },
+                    animation: {
+                        'marquee': 'marquee 20s linear infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #ec4899, 0 0 10px #ec4899, 0 0 15px #ec4899' },
+                            '100%': { boxShadow: '0 0 10px #ec4899, 0 0 20px #ec4899, 0 0 30px #ec4899' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <section>
+        <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+            <nav class="bg-black/80 backdrop-blur-lg rounded-full shadow-2xl px-6 md:px-8 py-3 md:py-4 mx-4 border border-pink-500/30">
+                <div class="flex items-center justify-between gap-4 md:gap-8">
+                    <div class="font-bold text-pink-400 flex items-center gap-2">
+                        <i class="fas fa-microchip text-lg md:text-xl animate-pulse-slow"></i>
+                        <span class="text-sm md:text-lg">IoT Portfolio</span>
+                    </div>
+                    <div class="flex items-center gap-3 md:gap-6 text-sm md:text-base">
+                        <a href="../porto.html" class="text-white hover:text-pink-400 transition-all duration-300 hover:scale-105">
+                            <i class="fas fa-home mr-1"></i>Home
+                        </a>
+                        <a href="../porto.html#Biodata" class="text-white hover:text-pink-400 transition-all duration-300 hover:scale-105">
+                            <i class="fas fa-user mr-1"></i>About
+                        </a>
+                        <a href="../porto.html#porto" class="text-white hover:text-pink-400 transition-all duration-300 hover:scale-105">
+                            <i class="fas fa-briefcase mr-1"></i>Projects
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="w-full h-[75vh] md:h-[80vh] relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 via-black to-pink-900/20"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
+        
+        <!-- Animated background elements -->
+        <div class="absolute top-20 left-10 w-2 h-2 bg-pink-400 rounded-full animate-ping"></div>
+        <div class="absolute top-40 right-20 w-3 h-3 bg-pink-500 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-32 left-1/4 w-1 h-1 bg-pink-300 rounded-full animate-bounce"></div>
+        <div class="absolute bottom-20 right-1/3 w-2 h-2 bg-pink-400 rounded-full animate-ping delay-1000"></div>
+        
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center px-4 md:px-8">
+                <div class="mb-6 animate-float">
+                    <i class="fas fa-network-wired text-4xl md:text-6xl text-pink-400 mb-4 animate-glow"></i>
+                </div>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+                    <span class="text-pink-400">IoT</span> Projects
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
+                    Connecting the Physical World with Digital Innovation
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+                    <span class="bg-pink-500/20 text-pink-300 px-3 md:px-4 py-2 rounded-full border border-pink-500/30">
+                        <i class="fas fa-wifi mr-2"></i>Connected Devices
+                    </span>
+                    <span class="bg-pink-500/20 text-pink-300 px-3 md:px-4 py-2 rounded-full border border-pink-500/30">
+                        <i class="fas fa-cloud mr-2"></i>Cloud Integration
+                    </span>
+                    <span class="bg-pink-500/20 text-pink-300 px-3 md:px-4 py-2 rounded-full border border-pink-500/30">
+                        <i class="fas fa-chart-line mr-2"></i>Data Analytics
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Projects Section -->
+    <section class="w-full min-h-screen bg-black py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <!-- Title -->
+            <div class="mb-12 md:mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    My <span class="text-pink-400">IoT</span> Solutions
+                </h2>
+                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+                    Innovative Internet of Things projects that bridge the gap between hardware and software
+                </p>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="flex justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl">
+                    
+                    <!-- Card 1: Smart Home System -->
+                    <div class="group w-full max-w-sm mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl hover:scale-105 hover:shadow-pink-500/25 transition-all duration-300 border border-pink-500/20 hover:border-pink-500/50 overflow-hidden">
+                        <div class="relative w-full h-48 md:h-56 bg-gradient-to-br from-pink-600 via-pink-500 to-pink-700 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <i class="fas fa-home text-4xl md:text-5xl text-white/90 z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                            <div class="absolute top-4 right-4 w-3 h-3 bg-white/60 rounded-full animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-2 h-2 bg-white/40 rounded-full animate-ping"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-microchip text-pink-400 mr-2"></i>
+                                <h3 class="text-xl md:text-2xl font-semibold text-white">Smart Home Hub</h3>
+                            </div>
+                            <p class="text-sm md:text-base text-gray-300 mb-6 leading-relaxed">
+                                Complete home automation system with ESP32, sensors, and mobile app integration for lighting, temperature, and security control.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">ESP32</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">WiFi</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">Mobile App</span>
+                            </div>
+                            <button class="w-full bg-transparent border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all duration-300 py-3 rounded-xl flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-pink-500/25">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Project</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Environmental Monitor -->
+                    <div class="group w-full max-w-sm mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl hover:scale-105 hover:shadow-pink-500/25 transition-all duration-300 border border-pink-500/20 hover:border-pink-500/50 overflow-hidden">
+                        <div class="relative w-full h-48 md:h-56 bg-gradient-to-br from-pink-700 via-pink-600 to-pink-800 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <i class="fas fa-leaf text-4xl md:text-5xl text-white/90 z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                            <div class="absolute top-6 left-6 w-2 h-2 bg-white/50 rounded-full animate-bounce"></div>
+                            <div class="absolute bottom-6 right-6 w-3 h-3 bg-white/40 rounded-full animate-pulse delay-500"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-thermometer-half text-pink-400 mr-2"></i>
+                                <h3 class="text-xl md:text-2xl font-semibold text-white">Environment Monitor</h3>
+                            </div>
+                            <p class="text-sm md:text-base text-gray-300 mb-6 leading-relaxed">
+                                Real-time environmental monitoring system tracking air quality, temperature, humidity, and noise levels with cloud analytics.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">Arduino</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">Sensors</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">Cloud</span>
+                            </div>
+                            <button class="w-full bg-transparent border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all duration-300 py-3 rounded-xl flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-pink-500/25">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Project</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Industrial IoT -->
+                    <div class="group w-full max-w-sm mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl hover:scale-105 hover:shadow-pink-500/25 transition-all duration-300 border border-pink-500/20 hover:border-pink-500/50 overflow-hidden">
+                        <div class="relative w-full h-48 md:h-56 bg-gradient-to-br from-pink-800 via-pink-700 to-pink-900 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <i class="fas fa-industry text-4xl md:text-5xl text-white/90 z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                            <div class="absolute top-3 right-8 w-1 h-1 bg-white/60 rounded-full animate-ping delay-300"></div>
+                            <div class="absolute bottom-8 left-3 w-2 h-2 bg-white/50 rounded-full animate-bounce delay-700"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-cogs text-pink-400 mr-2"></i>
+                                <h3 class="text-xl md:text-2xl font-semibold text-white">Industrial IoT</h3>
+                            </div>
+                            <p class="text-sm md:text-base text-gray-300 mb-6 leading-relaxed">
+                                Industrial monitoring solution for machinery health, predictive maintenance, and operational efficiency optimization.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">Raspberry Pi</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">MQTT</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-300 px-2 py-1 rounded">Dashboard</span>
+                            </div>
+                            <button class="w-full bg-transparent border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all duration-300 py-3 rounded-xl flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-pink-500/25">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Project</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Additional Projects Section -->
+    <section class="w-full bg-black py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                    More About <span class="text-pink-400">My IoT</span>
+                </h3>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl">
+                    
+                    <!-- Additional Card 1: Wearable Health -->
+                    <div class="group w-full max-w-sm mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl hover:scale-105 hover:shadow-pink-500/25 transition-all duration-300 border border-pink-500/20 hover:border-pink-500/50">
+                        <div class="relative w-full h-48 md:h-56 bg-gradient-to-br from-pink-600 via-pink-500 to-pink-700 flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-4xl md:text-5xl text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-watch text-pink-400 mr-2"></i>
+                                <h3 class="text-xl font-semibold text-white">Health Wearable</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 mb-6">
+                                Wearable device for continuous health monitoring with heart rate, steps, and sleep tracking capabilities.
+                            </p>
+                            <button class="w-full bg-transparent border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all duration-300 py-3 rounded-xl flex items-center justify-center gap-2">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Project</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Additional Card 2: Smart Agriculture -->
+                    <div class="group w-full max-w-sm mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl hover:scale-105 hover:shadow-pink-500/25 transition-all duration-300 border border-pink-500/20 hover:border-pink-500/50">
+                        <div class="relative w-full h-48 md:h-56 bg-gradient-to-br from-pink-700 via-pink-600 to-pink-800 flex items-center justify-center">
+                            <i class="fas fa-seedling text-4xl md:text-5xl text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-tractor text-pink-400 mr-2"></i>
+                                <h3 class="text-xl font-semibold text-white">Smart Farming</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 mb-6">
+                                Automated irrigation and crop monitoring system using soil sensors and weather data integration.
+                            </p>
+                            <button class="w-full bg-transparent border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all duration-300 py-3 rounded-xl flex items-center justify-center gap-2">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Project</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Additional Card 3: Vehicle Tracking -->
+                    <div class="group w-full max-w-sm mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl hover:scale-105 hover:shadow-pink-500/25 transition-all duration-300 border border-pink-500/20 hover:border-pink-500/50">
+                        <div class="relative w-full h-48 md:h-56 bg-gradient-to-br from-pink-800 via-pink-700 to-pink-900 flex items-center justify-center">
+                            <i class="fas fa-car text-4xl md:text-5xl text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-map-marker-alt text-pink-400 mr-2"></i>
+                                <h3 class="text-xl font-semibold text-white">Vehicle Tracker</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 mb-6">
+                                Real-time GPS tracking system for fleet management with geofencing and route optimization.
+                            </p>
+                            <button class="w-full bg-transparent border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all duration-300 py-3 rounded-xl flex items-center justify-center gap-2">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Project</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
